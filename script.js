@@ -1,14 +1,6 @@
-// Mobile menu toggle
+// Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navList = document.querySelector('.nav-list');
-    
-    if (mobileMenuToggle && navList) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navList.classList.toggle('active');
-            mobileMenuToggle.classList.toggle('active');
-        });
-    }
+    const navLinks = document.querySelectorAll('.nav-link');
     
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
@@ -32,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add active class to navigation links based on scroll position
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
     
     function updateActiveNavLink() {
         const scrollPosition = window.scrollY + 100;
