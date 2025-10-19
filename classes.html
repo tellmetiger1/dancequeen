@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Classes - Dance Queen Q</title>
+    <meta name="description" content="Explore our diverse dance class offerings at Dance Queen Q. From ballet to hip hop, find the perfect class for your dance journey.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Dance Queen Q</h1>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">About Us</a></li>
+                    <li><a href="classes.html" class="nav-link active">Join Our Classes</a></li>
+                    <li><a href="competition.html" class="nav-link">Our Competition Team</a></li>
+                    <li><a href="teachers.html" class="nav-link">Meet Our Teachers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Join Our Classes</h1>
+            <p class="page-subtitle">Explore our diverse class offerings and find the perfect fit for your dance journey</p>
+        </div>
+    </section>
+
+    <!-- Class Schedule Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Class Schedule</h2>
+            <div class="schedule-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>4:00 PM</strong></td>
+                            <td>Ballet I</td>
+                            <td>Jazz I</td>
+                            <td>Ballet II</td>
+                            <td>Hip Hop I</td>
+                            <td>Contemporary I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5:30 PM</strong></td>
+                            <td>Jazz II</td>
+                            <td>Ballet III</td>
+                            <td>Hip Hop II</td>
+                            <td>Jazz III</td>
+                            <td>Ballet IV</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7:00 PM</strong></td>
+                            <td>Adult Jazz</td>
+                            <td>Adult Ballet</td>
+                            <td>Adult Hip Hop</td>
+                            <td>Adult Contemporary</td>
+                            <td>Open Studio</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Register for Classes</h2>
+            <div class="form-container">
+                <form id="registrationForm" onsubmit="event.preventDefault(); submitForm('registrationForm');">
+                    <div class="form-group">
+                        <label for="studentName">Student Name *</label>
+                        <input type="text" id="studentName" name="studentName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentName">Parent/Guardian Name *</label>
+                        <input type="text" id="parentName" name="parentName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Student Age *</label>
+                        <input type="number" id="age" name="age" min="3" max="18" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="danceExperience">Dance Experience Level *</label>
+                        <select id="danceExperience" name="danceExperience" required>
+                            <option value="">Select Experience Level</option>
+                            <option value="beginner">Beginner (0-1 years)</option>
+                            <option value="intermediate">Intermediate (1-3 years)</option>
+                            <option value="advanced">Advanced (3+ years)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interestedClasses">Classes of Interest *</label>
+                        <select id="interestedClasses" name="interestedClasses" required>
+                            <option value="">Select Class Type</option>
+                            <option value="chinese-dance">Chinese Dance</option>
+                            <option value="ballet">Ballet</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="hip-hop">Hip Hop</option>
+                            <option value="contemporary">Contemporary</option>
+                            <option value="multiple">Multiple Classes</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredTime">Preferred Class Time</label>
+                        <select id="preferredTime" name="preferredTime">
+                            <option value="">Select Preferred Time</option>
+                            <option value="4pm">4:00 PM</option>
+                            <option value="530pm">5:30 PM</option>
+                            <option value="7pm">7:00 PM</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your dance goals, any special needs, or questions you may have..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Register for Classes</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What should my child wear to class?
+                    </div>
+                    <div class="faq-answer">
+                        Students should wear comfortable dance attire such as leotards, tights, and ballet shoes for ballet classes, or comfortable athletic wear and jazz shoes for other styles. Hair should be pulled back securely.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do you offer trial classes?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We offer trial classes for new students. Contact us to schedule a trial class and see if Dance Queen Q is the right fit for you.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What is your class size policy?
+                    </div>
+                    <div class="faq-answer">
+                        We maintain small class sizes to ensure personalized attention. Most classes have 8-12 students maximum, allowing for individual feedback and instruction.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How do I know which level class to register for?
+                    </div>
+                    <div class="faq-answer">
+                        Our instructors will evaluate your child's skill level during the first class and recommend the appropriate level. We can always adjust if needed to ensure the best learning experience.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What is your payment and refund policy?
+                    </div>
+                    <div class="faq-answer">
+                        Monthly tuition is due at the beginning of each month. We offer a 30-day money-back guarantee for new students. Please contact us for specific payment terms and policies.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do you have recitals or performances?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We hold annual recitals and participate in various community performances throughout the year. Students also have opportunities to compete in regional and national competitions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Dance Queen Q Studio</h3>
+                    <p>4230/4232 N Arlington Heights Rd<br>
+                    Arlington Heights, IL 60004</p>
+                    <p>Email: <a href="mailto:dancequeenq77@gmail.com">dancequeenq77@gmail.com</a></p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="competition.html">Competition Team</a></li>
+                        <li><a href="teachers.html">Teachers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dance Queen Q. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

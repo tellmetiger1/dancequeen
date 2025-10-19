@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Teachers - Dance Queen Q</title>
+    <meta name="description" content="Meet our experienced instructors who bring passion, technique, and mentorship to every class at Dance Queen Q.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Dance Queen Q</h1>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">About Us</a></li>
+                    <li><a href="classes.html" class="nav-link">Join Our Classes</a></li>
+                    <li><a href="competition.html" class="nav-link">Our Competition Team</a></li>
+                    <li><a href="teachers.html" class="nav-link active">Meet Our Teachers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Meet Our Teachers</h1>
+            <p class="page-subtitle">Our experienced instructors bring passion, technique, and mentorship to every class</p>
+        </div>
+    </section>
+
+    <!-- Teachers Introduction -->
+    <section class="content-section">
+        <div class="container">
+            <div class="teachers-intro">
+                <h2 class="section-title">Our Teaching Team</h2>
+                <p class="intro-text">
+                    At Dance Queen Q, our teachers are more than instructors—they are mentors, artists, and passionate advocates for dance education. Each member of our team brings unique expertise, years of experience, and a deep commitment to nurturing the next generation of dancers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Grid -->
+    <section class="content-section">
+        <div class="container">
+            <div class="teachers-grid">
+                <div class="teacher-card" onclick="openTeacherModal('Ruiqi Liu', 'Founder & Artistic Director of Dance Queen Q, Ruiqi brings over 15 years of experience in Chinese dance and choreography. She holds a Master\'s degree in Dance Education and has performed internationally. Ruiqi\'s passion for preserving and sharing Chinese cultural dance traditions has made her a respected figure in the dance community. She specializes in creating innovative choreography that bridges traditional and contemporary styles.', 'Founder & Artistic Director - Chinese Dance Specialist')">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Ruiqi Liu</h3>
+                        <p class="teacher-specialty">Founder & Artistic Director</p>
+                        <p class="teacher-bio">Specializing in Chinese dance and choreography with over 15 years of experience...</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card" onclick="openTeacherModal('Brandon', 'Brandon is our dynamic Hip Hop instructor with extensive experience as both a performer and youth mentor. He has competed in national hip hop competitions and brings high-energy, creative choreography to every class. Brandon\'s teaching style focuses on building confidence, self-expression, and technical precision while maintaining the authentic spirit of hip hop culture.', 'Hip Hop Instructor - Youth Mentor')">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Brandon</h3>
+                        <p class="teacher-specialty">Hip Hop Instructor</p>
+                        <p class="teacher-bio">Experienced performer and youth mentor with national competition background...</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card" onclick="openTeacherModal('Kevin', 'Kevin is our Ballet & Contemporary teacher and national competition coach. With a background in classical ballet and modern dance, he brings technical excellence and artistic sensitivity to his teaching. Kevin has trained dancers who have gone on to professional careers and continues to inspire students to reach their highest potential.', 'Ballet & Contemporary Teacher - Competition Coach')">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Kevin</h3>
+                        <p class="teacher-specialty">Ballet & Contemporary Teacher</p>
+                        <p class="teacher-bio">National competition coach with classical ballet and modern dance expertise...</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card" onclick="openTeacherModal('Myka', 'Myka is our creative Jazz instructor with a background in musical theater and commercial dance. Her innovative choreography and infectious energy make her classes both challenging and fun. Myka specializes in helping students develop their personal style while mastering fundamental jazz techniques.', 'Jazz Instructor - Creative Choreographer')">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Myka</h3>
+                        <p class="teacher-specialty">Jazz Instructor</p>
+                        <p class="teacher-bio">Creative choreographer with musical theater and commercial dance background...</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card" onclick="openTeacherModal('Inna', 'Inna is our Ballet technique specialist and youth performance coach. She brings classical Russian ballet training and a gentle, nurturing approach to teaching. Inna\'s attention to detail and patient instruction helps students develop strong technical foundations while building confidence and love for ballet.', 'Ballet Technique Specialist - Youth Coach')">
+                    <div class="teacher-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Inna</h3>
+                        <p class="teacher-specialty">Ballet Technique Specialist</p>
+                        <p class="teacher-bio">Youth performance coach with classical Russian ballet training...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Philosophy -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Our Teaching Philosophy</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion First</h3>
+                    <p>We believe that passion is the foundation of great dancing. Our teachers inspire students to love the art of dance while developing their skills.</p>
+                </div>
+                
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Technical Excellence</h3>
+                    <p>Strong technique is essential for safe and beautiful dancing. We provide comprehensive training in proper form and movement principles.</p>
+                </div>
+                
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Individual Growth</h3>
+                    <p>Every student is unique. We tailor our instruction to meet individual needs and help each dancer reach their personal best.</p>
+                </div>
+                
+                <div class="philosophy-item">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Creative Expression</h3>
+                    <p>Dance is an art form that allows for personal expression. We encourage students to develop their own artistic voice and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teacher Qualifications -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Teacher Qualifications</h2>
+            <div class="qualifications-content">
+                <div class="qualification-item">
+                    <h3>Education & Training</h3>
+                    <p>All our teachers hold degrees in dance or related fields and continue their education through workshops, master classes, and professional development opportunities.</p>
+                </div>
+                
+                <div class="qualification-item">
+                    <h3>Professional Experience</h3>
+                    <p>Our instructors have extensive performance backgrounds, including professional dance companies, musical theater, and commercial dance work.</p>
+                </div>
+                
+                <div class="qualification-item">
+                    <h3>Teaching Certifications</h3>
+                    <p>Many of our teachers hold specialized certifications in dance education, injury prevention, and youth development.</p>
+                </div>
+                
+                <div class="qualification-item">
+                    <h3>Ongoing Development</h3>
+                    <p>We invest in our teachers' continued growth through regular training, conferences, and collaboration with other dance professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teacher Modal -->
+    <div id="teacherModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('teacherModal')">&times;</span>
+            <h2 id="teacherModalTitle">Teacher Name</h2>
+            <div class="modal-photo">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3 id="teacherModalSpecialty" class="modal-specialty">Specialty</h3>
+            <p id="teacherModalBio" class="modal-bio">Teacher bio and detailed information will be displayed here.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Dance Queen Q Studio</h3>
+                    <p>4230/4232 N Arlington Heights Rd<br>
+                    Arlington Heights, IL 60004</p>
+                    <p>Email: <a href="mailto:dancequeenq77@gmail.com">dancequeenq77@gmail.com</a></p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="competition.html">Competition Team</a></li>
+                        <li><a href="teachers.html">Teachers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dance Queen Q. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

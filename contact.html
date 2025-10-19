@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dance Queen Q</title>
+    <meta name="description" content="Contact Dance Queen Q dance studio in Arlington Heights, IL. Reach out with questions or to schedule a trial class.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Dance Queen Q</h1>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">About Us</a></li>
+                    <li><a href="classes.html" class="nav-link">Join Our Classes</a></li>
+                    <li><a href="competition.html" class="nav-link">Our Competition Team</a></li>
+                    <li><a href="teachers.html" class="nav-link">Meet Our Teachers</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">We'd love to hear from you! Reach out with questions or to schedule a trial class</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <div class="form-container">
+                        <form id="contactForm" onsubmit="event.preventDefault(); submitForm('contactForm');">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="classes">Class Information</option>
+                                    <option value="trial">Trial Class Request</option>
+                                    <option value="competition">Competition Team</option>
+                                    <option value="schedule">Schedule Information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Tell us about your dance goals, questions, or how we can help you..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="contact-info-container">
+                    <h2 class="section-title">Studio Information</h2>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Address</h3>
+                                <p>Dance Queen Q Studio<br>
+                                4230/4232 N Arlington Heights Rd<br>
+                                Arlington Heights, IL 60004</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:dancequeenq77@gmail.com">dancequeenq77@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+1-847-555-0123">(847) 555-0123</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Studio Hours</h3>
+                                <p>Monday - Friday: 3:00 PM - 9:00 PM<br>
+                                Saturday: 9:00 AM - 5:00 PM<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Map</h3>
+                    <p>Dance Queen Q Studio<br>
+                    4230/4232 N Arlington Heights Rd<br>
+                    Arlington Heights, IL 60004</p>
+                    <a href="https://maps.google.com/?q=4230+N+Arlington+Heights+Rd,+Arlington+Heights,+IL+60004" target="_blank" class="cta-button">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How do I schedule a trial class?
+                    </div>
+                    <div class="faq-answer">
+                        Contact us through the form above or call us directly to schedule a trial class. We'll help you choose the right class based on your age and experience level.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What should I bring to my first class?
+                    </div>
+                    <div class="faq-answer">
+                        For your first class, wear comfortable clothes you can move in. We'll provide guidance on proper dance attire once you decide to join our classes.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do you offer classes for adults?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We offer adult classes in Jazz, Ballet, Hip Hop, and Contemporary. These classes are designed for adults of all skill levels.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What is your cancellation policy?
+                    </div>
+                    <div class="faq-answer">
+                        We require 24-hour notice for class cancellations. Please contact us as soon as possible if you need to cancel or reschedule.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do you have parking available?
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we have convenient parking available in front of our studio. The parking lot is well-lit and easily accessible.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How do I know which class level is right for me?
+                    </div>
+                    <div class="faq-answer">
+                        Our instructors will evaluate your skill level during your first class and recommend the appropriate level. We can always adjust if needed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Dance Queen Q Studio</h3>
+                    <p>4230/4232 N Arlington Heights Rd<br>
+                    Arlington Heights, IL 60004</p>
+                    <p>Email: <a href="mailto:dancequeenq77@gmail.com">dancequeenq77@gmail.com</a></p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="competition.html">Competition Team</a></li>
+                        <li><a href="teachers.html">Teachers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dance Queen Q. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
