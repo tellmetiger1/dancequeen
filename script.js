@@ -142,9 +142,14 @@ function validateForm(formId) {
     return isValid;
 }
 
+// Initialize EmailJS
+(function() {
+    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+    emailjs.init('DJhqNaoXcXDMdW2_v');
+})();
+
 function submitForm(formId) {
     if (validateForm(formId)) {
-        // Show success message
         const form = document.getElementById(formId);
         const submitBtn = form.querySelector('.submit-btn');
         const originalText = submitBtn.textContent;
@@ -152,18 +157,42 @@ function submitForm(formId) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual form handling)
-        setTimeout(() => {
-            submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.background = '#27ae60';
-            
-            setTimeout(() => {
-                form.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '#d4af37';
-            }, 2000);
-        }, 1500);
+        // Prepare form data for EmailJS
+        const formData = {
+            from_name: form.querySelector('#name').value,
+            from_email: form.querySelector('#email').value,
+            phone: form.querySelector('#phone').value,
+            subject: form.querySelector('#subject').value,
+            message: form.querySelector('#message').value,
+            to_email: 'dancequeenq77@gmail.com' // Your studio email
+        };
+        
+        // Send email using EmailJS
+        emailjs.send('service_4c5xxbd', 'template_942r9bf', formData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.background = '#27ae60';
+                
+                // Reset form after success
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '#d4af37';
+                }, 2000);
+            }, function(error) {
+                console.log('FAILED...', error);
+                submitBtn.textContent = 'Error - Try Again';
+                submitBtn.style.background = '#e74c3c';
+                
+                // Reset button after error
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '#d4af37';
+                }, 3000);
+            });
     }
 }
 
