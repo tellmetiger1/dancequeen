@@ -1152,15 +1152,56 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.modal-bio {
-    color: #666;
-    line-height: 1.6;
+.modal-image-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-image-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-bio-text {
+    color: #555;
+    line-height: 1.8;
     text-align: left;
+    font-size: 1rem;
+}
+
+.modal-bio-text p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.modal-bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Legacy modal-bio class for backward compatibility */
+.modal-bio {
+    color: #555;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.modal-bio p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.modal-bio p:last-child {
+    margin-bottom: 0;
 }
 
 .modal-bio img {
     display: block;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
     max-width: 400px;
     width: 100%;
     border-radius: 10px;

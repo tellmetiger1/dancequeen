@@ -217,14 +217,37 @@ function openCompetitionModal(dancerName, dancerCaption = '') {
 function openTeacherModal(teacherName, teacherBio, teacherSpecialty) {
     const modal = document.getElementById('teacherModal');
     const modalTitle = document.getElementById('teacherModalTitle');
+    const modalImage = document.getElementById('teacherModalImage');
     const modalBio = document.getElementById('teacherModalBio');
     const modalSpecialty = document.getElementById('teacherModalSpecialty');
     
     if (modal && modalTitle) {
         modalTitle.textContent = teacherName;
-        if (modalBio) {
-            modalBio.textContent = teacherBio;
+        
+        if (modalBio && modalImage) {
+            // Create a temporary div to decode HTML entities
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = teacherBio;
+            
+            // Extract image and text content
+            const imgElement = tempDiv.querySelector('img');
+            const paragraphs = tempDiv.querySelectorAll('p');
+            
+            // Set image
+            if (imgElement) {
+                modalImage.innerHTML = '';
+                modalImage.appendChild(imgElement.cloneNode(true));
+            }
+            
+            // Set text content (paragraphs only)
+            if (paragraphs.length > 0) {
+                modalBio.innerHTML = '';
+                paragraphs.forEach(p => {
+                    modalBio.appendChild(p.cloneNode(true));
+                });
+            }
         }
+        
         if (modalSpecialty) {
             modalSpecialty.textContent = teacherSpecialty;
         }
