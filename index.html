@@ -56,6 +56,34 @@
             </div>
             
             <!-- Image Carousel - Simple inline version -->
+            <style>
+                /* Critical carousel styles - inline to ensure they load first */
+                .carousel-slides {
+                    position: relative !important;
+                    width: 100% !important;
+                    height: 500px !important;
+                }
+                .carousel-slide {
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    opacity: 0 !important;
+                    visibility: hidden !important;
+                    transition: opacity 0.6s ease-in-out !important;
+                }
+                .carousel-slide.active {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    z-index: 1 !important;
+                }
+                @media (max-width: 480px) {
+                    .carousel-slides {
+                        height: 300px !important;
+                    }
+                }
+            </style>
             <div class="image-carousel" id="imageCarousel">
                 <div class="carousel-container">
                     <button class="carousel-btn carousel-prev" onclick="carouselPrev()" aria-label="Previous image">
