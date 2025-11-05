@@ -142,10 +142,12 @@ function validateForm(formId) {
     return isValid;
 }
 
-// Initialize EmailJS
+// Initialize EmailJS (only if EmailJS is loaded)
 (function() {
-    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-    emailjs.init('DJhqNaoXcXDMdW2_v');
+    if (typeof emailjs !== 'undefined') {
+        // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+        emailjs.init('DJhqNaoXcXDMdW2_v');
+    }
 })();
 
 function submitForm(formId) {

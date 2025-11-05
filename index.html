@@ -42,10 +42,103 @@
     <!-- About Us Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Dance Queen Q</h2>
-            <p class="about-text">
-                Welcome to Dance Queen Q, where passion meets precision. Our studio is dedicated to nurturing dancers of all ages and skill levels in a supportive and inspiring environment.
-            </p>
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-text">
+                <p>
+                    Dance Queen Q was founded in 2020 by Ruiqi Liu, who came to the United States in 2017 and has been devoted to dance education ever since.
+                </p>
+                <p>
+                    With a professional background in Chinese Dance Performance and Education, Ruiqi combined her deep understanding of Chinese training methods with the creativity and artistic spirit of American dance education.
+                </p>
+                <p>
+                    Before founding Dance Queen Q, Ruiqi served as the director at Green Dance Company, where she gained valuable teaching and management experience. When Dance Queen Q officially launched in 2020, it already had a strong foundation and a growing number of passionate students.
+                </p>
+            </div>
+            
+            <!-- Image Carousel - Simple inline version -->
+            <div class="image-carousel" id="imageCarousel">
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-prev" onclick="carouselPrev()" aria-label="Previous image">
+                        <span>‹</span>
+                    </button>
+                    <div class="carousel-slides">
+                        <div class="carousel-slide active">
+                            <img src="images/classroom/room1.jpg" alt="Dance Queen Q Studio Classroom" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/classroom/room2.jpg" alt="Dance Queen Q Studio Classroom" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/classroom/trophies.jpg" alt="Dance Queen Q Competition Awards" class="carousel-image">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" onclick="carouselNext()" aria-label="Next image">
+                        <span>›</span>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="carouselGoto(0)"></span>
+                    <span class="indicator" onclick="carouselGoto(1)"></span>
+                    <span class="indicator" onclick="carouselGoto(2)"></span>
+                </div>
+            </div>
+            
+            <!-- Inline Carousel Script - Guaranteed to work -->
+            <script>
+                var currentIndex = 0;
+                var autoTimer = null;
+                
+                function updateSlides() {
+                    var slides = document.querySelectorAll('#imageCarousel .carousel-slide');
+                    var indicators = document.querySelectorAll('#imageCarousel .indicator');
+                    
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].classList.remove('active');
+                        if (indicators[i]) indicators[i].classList.remove('active');
+                    }
+                    
+                    if (slides[currentIndex]) {
+                        slides[currentIndex].classList.add('active');
+                        if (indicators[currentIndex]) indicators[currentIndex].classList.add('active');
+                    }
+                }
+                
+                function carouselNext() {
+                    var slides = document.querySelectorAll('#imageCarousel .carousel-slide');
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateSlides();
+                    resetAutoplay();
+                }
+                
+                function carouselPrev() {
+                    var slides = document.querySelectorAll('#imageCarousel .carousel-slide');
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateSlides();
+                    resetAutoplay();
+                }
+                
+                function carouselGoto(index) {
+                    currentIndex = index;
+                    updateSlides();
+                    resetAutoplay();
+                }
+                
+                function startAutoplay() {
+                    autoTimer = setInterval(carouselNext, 10000);
+                }
+                
+                function resetAutoplay() {
+                    if (autoTimer) clearInterval(autoTimer);
+                    startAutoplay();
+                }
+                
+                // Start autoplay when page loads
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', startAutoplay);
+                } else {
+                    startAutoplay();
+                }
+            </script>
             
             <!-- Dance Styles -->
             <div class="dance-styles">
@@ -78,9 +171,23 @@
         <div class="container">
             <div class="philosophy-content">
                 <h2 class="section-title">Our Philosophy</h2>
-                <p class="philosophy-text">
-                    At Dance Queen Q, we believe in nurturing every student's unique potential. Our studio is built on respect—for students, parents, and teachers alike. We foster a positive and inclusive environment where communication and collaboration thrive. We are proud to be a community where everyone feels seen, heard, and supported.
-                </p>
+                <div class="philosophy-text">
+                    <p style="font-weight: 600; font-size: 1.3rem; color: #d4af37; margin: 1.5rem 0;">
+                        Every child deserves a stage.
+                    </p>
+                    <p>
+                        We provide a professional yet relaxing environment where students can learn dance with joy and confidence.
+                    </p>
+                    <p>
+                        Our unique teaching method blends the structured techniques of the Chinese curriculum with the expressive, artistic focus of American dance education.
+                    </p>
+                    <p>
+                        This balance allows students to achieve high-level results efficiently and meaningfully — not through endless repetition, but through inspiration and connection to the art of dance.
+                    </p>
+                    <p>
+                        No matter how many classes a student takes or how much natural talent they have, we believe everyone deserves the chance to perform, to grow, and to shine.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -89,10 +196,15 @@
     <section class="community">
         <div class="container">
             <div class="community-content">
-                <h2 class="section-title">Our Community</h2>
-                <p class="community-text">
-                    Dance Queen Q is more than a dance studio—it's a family. We value strong relationships and open communication with parents and students. Together, we create a space where dancers grow not only in skill but in confidence and character.
-                </p>
+                <h2 class="section-title">Our Journey</h2>
+                <div class="community-text">
+                    <p>
+                        Since 2023, Dance Queen Q's competition teams have participated in numerous national dance competitions and have consistently earned First Place Overall and Highest Score Awards for three consecutive years.
+                    </p>
+                    <p>
+                        Our young dancers have impressed judges and audiences alike, making Dance Queen Q a name known for excellence, creativity, and teamwork.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -101,10 +213,15 @@
     <section class="competition-philosophy">
         <div class="container">
             <div class="competition-content">
-                <h2 class="section-title">Competition Philosophy</h2>
-                <p class="competition-text">
-                    Students at Dance Queen Q are encouraged to participate in dance competitions based on their personal goals and readiness. We support each dancer's journey, whether they aim to perform, compete, or simply enjoy the art of dance.
-                </p>
+                <h2 class="section-title">Our Community</h2>
+                <div class="competition-text">
+                    <p>
+                        Dance Queen Q is more than a dance school — it's a community built on passion, creativity, and love for the stage.
+                    </p>
+                    <p>
+                        We are proud to see our students grow, challenge themselves, and discover the beauty of dance in every class and performance.
+                    </p>
+                </div>
                 <a href="competition.html" class="cta-button secondary">Meet Our Competition Team</a>
             </div>
         </div>

@@ -173,6 +173,135 @@ h1, h2, h3, h4, h5, h6 {
     color: #666;
 }
 
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Image Carousel */
+.image-carousel {
+    max-width: 900px;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    z-index: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #d4af37;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4af37;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    pointer-events: auto;
+}
+
+.carousel-btn:hover {
+    background: white;
+    color: #b8941f;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn span {
+    line-height: 1;
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #d4af37;
+    width: 30px;
+    border-radius: 6px;
+}
+
+.indicator:hover {
+    background: #b8941f;
+}
+
 .dance-styles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -222,6 +351,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
 }
 
+.philosophy-text p {
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Community Section */
 .community {
     padding: 100px 0;
@@ -238,6 +375,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     color: #666;
     line-height: 1.8;
+}
+
+.community-text p {
+    margin-bottom: 1.5rem;
+}
+
+.community-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* Competition Philosophy Section */
@@ -257,6 +402,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #666;
     line-height: 1.8;
     margin-bottom: 2rem;
+}
+
+.competition-text p {
+    margin-bottom: 1.5rem;
+}
+
+.competition-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* Footer */
@@ -344,6 +497,10 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+    
+    .carousel-slides {
+        height: 400px;
     }
     
     .nav {
@@ -467,6 +624,24 @@ h1, h2, h3, h4, h5, h6 {
     
     .style-card h3 {
         font-size: 1rem;
+    }
+    
+    .carousel-slides {
+        height: 300px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .carousel-prev {
+        left: 10px;
+    }
+    
+    .carousel-next {
+        right: 10px;
     }
 }
 
