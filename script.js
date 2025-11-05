@@ -216,14 +216,11 @@ function openCompetitionModal(dancerName, dancerCaption = '') {
 // Teacher modal
 function openTeacherModal(teacherName, teacherBio, teacherSpecialty) {
     const modal = document.getElementById('teacherModal');
-    const modalTitle = document.getElementById('teacherModalTitle');
     const modalImage = document.getElementById('teacherModalImage');
     const modalBio = document.getElementById('teacherModalBio');
     const modalSpecialty = document.getElementById('teacherModalSpecialty');
     
-    if (modal && modalTitle) {
-        modalTitle.textContent = teacherName;
-        
+    if (modal) {
         if (modalBio && modalImage) {
             // Create a temporary div to decode HTML entities
             const tempDiv = document.createElement('div');
