@@ -595,6 +595,15 @@ h1, h2, h3, h4, h5, h6 {
     .contact-info-container {
         order: 1;
     }
+    
+    .schedule-image {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .schedule-image-container {
+        margin: 1rem 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -697,6 +706,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .schedule-table tr:hover {
     background: #f8f8f8;
+}
+
+/* Schedule Image Styles */
+.schedule-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.schedule-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.schedule-image:hover {
+    transform: scale(1.02);
 }
 
 /* Form Styles */
