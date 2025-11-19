@@ -94,8 +94,23 @@ window.addEventListener('click', function(event) {
 });
 
 // FAQ accordion functionality
-function toggleFAQ(element) {
+window.toggleFAQ = function(element) {
+    if (!element) {
+        console.error('toggleFAQ: element is null');
+        return;
+    }
+    
     const answer = element.nextElementSibling;
+    if (!answer) {
+        console.error('toggleFAQ: answer element not found');
+        return;
+    }
+    
+    if (!answer.classList.contains('faq-answer')) {
+        console.error('toggleFAQ: next element is not a faq-answer');
+        return;
+    }
+    
     const isActive = element.classList.contains('active');
     
     // Close all other FAQ items
@@ -110,7 +125,7 @@ function toggleFAQ(element) {
         element.classList.add('active');
         answer.classList.add('active');
     }
-}
+};
 
 // Form validation and submission
 function validateForm(formId) {
@@ -296,11 +311,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Example: Add click handlers for FAQ questions
+    // Add click handlers for FAQ questions (backup to inline onclick)
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-            toggleFAQ(this);
+        // Remove existing onclick and use addEventListener instead
+        question.removeAttribute('onclick');
+        question.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.toggleFAQ) {
+                window.toggleFAQ(this);
+            }
         });
     });
 });
