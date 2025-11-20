@@ -185,7 +185,7 @@ function submitForm(formId) {
         };
         
         // Send email using EmailJS
-        emailjs.send('service_4c5xxbd', 'template_942r9bf', formData)
+        emailjs.send('service_um97qoq', 'template_942r9bf', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 submitBtn.textContent = 'Message Sent!';
