@@ -321,6 +321,17 @@ function openTeacherModal(teacherName, teacherBio, teacherSpecialty) {
     }
 }
 
+// Image modal functionality
+window.openImageModal = function(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    if (modal && modalImage) {
+        modalImage.src = imageSrc;
+        openModal('imageModal');
+    }
+};
+
 // Scroll to top functionality
 function scrollToTop() {
     window.scrollTo({

@@ -101,65 +101,30 @@
     <section class="content-section">
         <div class="container">
             <h2 class="section-title">Meet Our Competition Dancers</h2>
-            <div class="competition-gallery">
-                <div class="competition-item" onclick="openCompetitionModal('Emma Chen', 'Senior Soloist - Specializes in Chinese Dance and Contemporary. Multiple regional championship winner.')">
-                    <div class="competition-photo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="competition-info">
-                        <h3 class="competition-name">Emma Chen</h3>
-                        <p>Senior Soloist</p>
-                    </div>
+            <div class="competition-images-gallery">
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_0872.JPG')">
+                    <img src="images/competition teams/IMG_0872.JPG" alt="Competition Team">
                 </div>
-                
-                <div class="competition-item" onclick="openCompetitionModal('Sophia Rodriguez', 'Junior Champion - Ballet and Jazz specialist. National competition qualifier.')">
-                    <div class="competition-photo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="competition-info">
-                        <h3 class="competition-name">Sophia Rodriguez</h3>
-                        <p>Junior Champion</p>
-                    </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_0862.JPG')">
+                    <img src="images/competition teams/IMG_0862.JPG" alt="Competition Team">
                 </div>
-                
-                <div class="competition-item" onclick="openCompetitionModal('Maya Patel', 'Hip Hop Star - Creative choreographer and team captain. Regional hip hop champion.')">
-                    <div class="competition-photo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="competition-info">
-                        <h3 class="competition-name">Maya Patel</h3>
-                        <p>Hip Hop Star</p>
-                    </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_1180.JPG')">
+                    <img src="images/competition teams/IMG_1180.JPG" alt="Competition Team">
                 </div>
-                
-                <div class="competition-item" onclick="openCompetitionModal('Lily Johnson', 'Contemporary Artist - Expressive performer with multiple solo awards.')">
-                    <div class="competition-photo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="competition-info">
-                        <h3 class="competition-name">Lily Johnson</h3>
-                        <p>Contemporary Artist</p>
-                    </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_2588.JPG')">
+                    <img src="images/competition teams/IMG_2588.JPG" alt="Competition Team">
                 </div>
-                
-                <div class="competition-item" onclick="openCompetitionModal('Ava Thompson', 'Ballet Virtuoso - Classical technique specialist with international competition experience.')">
-                    <div class="competition-photo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="competition-info">
-                        <h3 class="competition-name">Ava Thompson</h3>
-                        <p>Ballet Virtuoso</p>
-                    </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_2619.JPG')">
+                    <img src="images/competition teams/IMG_2619.JPG" alt="Competition Team">
                 </div>
-                
-                <div class="competition-item" onclick="openCompetitionModal('Zoe Kim', 'Rising Star - Youngest team member with exceptional potential in multiple dance styles.')">
-                    <div class="competition-photo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="competition-info">
-                        <h3 class="competition-name">Zoe Kim</h3>
-                        <p>Rising Star</p>
-                    </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_8536.JPG')">
+                    <img src="images/competition teams/IMG_8536.JPG" alt="Competition Team">
+                </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_8537.JPG')">
+                    <img src="images/competition teams/IMG_8537.JPG" alt="Competition Team">
+                </div>
+                <div class="competition-image-item" onclick="openImageModal('images/competition teams/IMG_9624.JPG')">
+                    <img src="images/competition teams/IMG_9624.JPG" alt="Competition Team">
                 </div>
             </div>
         </div>
@@ -191,6 +156,14 @@
         <div class="modal-content" style="max-width: 700px; max-height: 85vh; padding: 0; position: relative; overflow: hidden;">
             <span class="close" onclick="closeModal('competitionLearnMoreModal')">&times;</span>
             <div id="competitionLearnMoreContent" style="padding: 2rem; padding-top: 3rem; max-height: 85vh; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; height: 100%;"></div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content image-modal-content">
+            <span class="close" onclick="closeModal('imageModal')">&times;</span>
+            <img id="modalImage" src="" alt="Competition Team">
         </div>
     </div>
 
