@@ -42,10 +42,12 @@
     <section class="content-section">
         <div class="container">
             <div class="competition-content">
-                <h2 class="section-title">Competition Philosophy</h2>
                 <p class="competition-text">
-                    Students at Dance Queen Q are encouraged to participate in dance competitions based on their personal goals and readiness. We support each dancer's journey, whether they aim to perform, compete, or simply enjoy the art of dance. Our competition team represents the dedication, passion, and excellence that defines our studio.
+                    Founded in 2022, the Dance Queen Q Competition Team features 50+ dancers, 30+ original works, and training across Chinese Dance, Contemporary, Jazz, and Hip-Hop. Dancers range from ages 3-17, competing in Beginner, Intermediate, and Advanced divisions.
                 </p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="cta-button" id="learnMoreBtn">Learn More</button>
+                </div>
             </div>
         </div>
     </section>
@@ -204,6 +206,14 @@
                 <i class="fas fa-user-circle"></i>
             </div>
             <p id="modalCaption">Dancer information and achievements will be displayed here.</p>
+        </div>
+    </div>
+
+    <!-- Competition Learn More Modal -->
+    <div id="competitionLearnMoreModal" class="modal">
+        <div class="modal-content" style="max-width: 700px; max-height: 85vh; padding: 0; position: relative; overflow: hidden;">
+            <span class="close" onclick="closeModal('competitionLearnMoreModal')">&times;</span>
+            <div id="competitionLearnMoreContent" style="padding: 2rem; padding-top: 3rem; max-height: 85vh; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; height: 100%;"></div>
         </div>
     </div>
 

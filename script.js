@@ -228,6 +228,60 @@ function openCompetitionModal(dancerName, dancerCaption = '') {
     }
 }
 
+// Competition Learn More modal
+function openCompetitionLearnMoreModal() {
+    console.log('openCompetitionLearnMoreModal called');
+    const modal = document.getElementById('competitionLearnMoreModal');
+    const content = document.getElementById('competitionLearnMoreContent');
+    
+    console.log('Modal element:', modal);
+    console.log('Content element:', content);
+    
+    if (!modal) {
+        console.error('Modal element not found');
+        return;
+    }
+    
+    if (!content) {
+        console.error('Content element not found');
+        return;
+    }
+    
+    content.innerHTML = `
+        <h2 style="color: #2c2c2c; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">About Our Competition Team</h2>
+        
+        <div style="margin-bottom: 2.5rem;">
+            <h3 style="color: #d4af37; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Achievements</h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">Our team has consistently delivered top-tier results, including:</p>
+            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">Multiple Overall Highest Scores every year</li>
+                <li style="margin-bottom: 0.5rem;">Frequent first-place wins across levels</li>
+                <li style="margin-bottom: 0.5rem;">Judge's Choice and Best Performance awards</li>
+                <li style="margin-bottom: 0.5rem;">Repeated Best Choreography Awards</li>
+                <li style="margin-bottom: 0.5rem;">Scholarships and invitations to National Finals</li>
+            </ul>
+        </div>
+        
+        <div style="margin-bottom: 2.5rem;">
+            <h3 style="color: #d4af37; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Our Approach</h3>
+            <p style="color: #666; line-height: 1.8;">We create custom choreography for each dancer, highlight individual strengths, and maintain efficient, high-quality training. Innovation and originality remain core to our choreographic style.</p>
+        </div>
+        
+        <div>
+            <h3 style="color: #d4af37; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Our Mission</h3>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 1rem;">We believe every child deserves the chance to shine.</p>
+            <p style="color: #666; line-height: 1.8;">Our goal is to help dancers build confidence, express themselves, and experience the joy of performing on stage—no matter their starting point.</p>
+        </div>
+    `;
+    
+    console.log('Calling openModal');
+    openModal('competitionLearnMoreModal');
+    console.log('Modal display after openModal:', modal.style.display);
+}
+
+// Make it globally accessible
+window.openCompetitionLearnMoreModal = openCompetitionLearnMoreModal;
+
 // Teacher modal
 function openTeacherModal(teacherName, teacherBio, teacherSpecialty) {
     const modal = document.getElementById('teacherModal');
@@ -324,4 +378,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Add click handler for Learn More button
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    if (learnMoreBtn) {
+        learnMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Learn More button clicked via event listener');
+            if (typeof openCompetitionLearnMoreModal === 'function') {
+                openCompetitionLearnMoreModal();
+            } else {
+                console.error('openCompetitionLearnMoreModal function not found');
+            }
+        });
+    }
 });
