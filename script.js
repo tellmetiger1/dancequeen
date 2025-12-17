@@ -1,3 +1,62 @@
+// ============================================
+// CACHE BUSTING FOR IMAGES
+// ============================================
+// When you update images, increment this version number
+// This ensures browsers fetch the latest images instead of using cached versions
+const IMAGE_CACHE_VERSION = '3';
+
+// Helper function to add cache-busting to any image URL
+// Use this in onclick handlers: window.open(addCacheBusting('images/path.jpg'), '_blank')
+window.addCacheBusting = function(url) {
+    if (!url || !url.includes('images/')) return url;
+    if (url.includes('?v=')) return url; // Already has version
+    const separator = url.includes('?') ? '&' : '?';
+    return url + separator + 'v=' + IMAGE_CACHE_VERSION;
+};
+
+// Function to add cache-busting query parameter to image URLs
+function addCacheBustingToImages() {
+    // Update all <img> src attributes
+    const images = document.querySelectorAll('img[src^="images/"]');
+    images.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.includes('?v=')) {
+            img.src = window.addCacheBusting(src);
+        }
+    });
+    
+    // Update background images in inline styles
+    const elementsWithBg = document.querySelectorAll('[style*="background-image"]');
+    elementsWithBg.forEach(el => {
+        const style = el.getAttribute('style');
+        if (style && style.includes('images/') && !style.includes('?v=')) {
+            const newStyle = style.replace(/url\(['"]?([^'"]*images\/[^'"]*)['"]?\)/g, (match, url) => {
+                return `url('${window.addCacheBusting(url)}')`;
+            });
+            el.setAttribute('style', newStyle);
+        }
+    });
+    
+    // Update onclick attributes that contain image URLs
+    const elementsWithOnclick = document.querySelectorAll('[onclick*="images/"]');
+    elementsWithOnclick.forEach(el => {
+        const onclick = el.getAttribute('onclick');
+        if (onclick && onclick.includes('images/') && !onclick.includes('?v=')) {
+            const newOnclick = onclick.replace(/(['"])(images\/[^'"]*)(['"])/g, (match, quote1, url, quote2) => {
+                return quote1 + window.addCacheBusting(url) + quote2;
+            });
+            el.setAttribute('onclick', newOnclick);
+        }
+    });
+}
+
+// Run cache busting as soon as possible
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addCacheBustingToImages);
+} else {
+    addCacheBustingToImages();
+}
+
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -327,7 +386,8 @@ window.openImageModal = function(imageSrc) {
     const modalImage = document.getElementById('modalImage');
     
     if (modal && modalImage) {
-        modalImage.src = imageSrc;
+        // Apply cache busting to the image source
+        modalImage.src = window.addCacheBusting(imageSrc);
         openModal('imageModal');
     }
 };
