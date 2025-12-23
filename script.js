@@ -3,7 +3,7 @@
 // ============================================
 // When you update images, increment this version number
 // This ensures browsers fetch the latest images instead of using cached versions
-const IMAGE_CACHE_VERSION = '3';
+const IMAGE_CACHE_VERSION = '4';
 
 // Helper function to add cache-busting to any image URL
 // Use this in onclick handlers: window.open(addCacheBusting('images/path.jpg'), '_blank')
